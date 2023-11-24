@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
-
 #define ERR_MSG "Error"
 
 /**
@@ -49,21 +48,6 @@ void errors(void)
 	exit(98);
 }
 
-#include "main.h"
-#include <unistd.h>
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
-
 /**
  * main - multiplies two positive numbers
  * @argc: number of arguments
@@ -106,11 +90,11 @@ int main(int argc, char *argv[])
 		if (result[i])
 			a = 1;
 		if (a)
-			_putchar(result[i] + '0');
+			putchar(result[i] + '0');
 	}
 	if (!a)
-		_putchar('0');
-	_putchar('\n');
+		putchar('0');
+	putchar('\n');
 	free(result);
 	return (0);
 }
